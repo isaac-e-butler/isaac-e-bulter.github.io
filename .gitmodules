@@ -1,0 +1,3 @@
+[submodule "projects/maze-game"]
+	path = projects/maze-game
+	url = https://github.com/GhostRunners25/maze-game
