@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'regular';
+    src: url('./ubuntu-mono-regular.ttf');
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('./ubuntu-mono-bold.ttf');
+}
+
+@font-face {
+    font-family: 'italic';
+    src: url('./ubuntu-mono-italic.ttf');
+}
+
+@font-face {
+    font-family: 'bold-italic';
+    src: url('./ubuntu-mono-bold-italic.ttf');
+}
+
+html {
+    color: rgb(255, 255, 255);
+    font-family: 'regular';
+}

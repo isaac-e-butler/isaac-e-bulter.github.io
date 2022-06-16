@@ -1,0 +1,31 @@
+@import url('./fonts/font.css');
+
+@import url('./header.css');
+@import url('./article.css');
+
+@import url('./about.css');
+@import url('./projects.css');
+@import url('./media.css');
+
+@import url('./animations.css');
+
+html, body {
+    background-color: rgb(80, 80, 80);
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    top: 140px;
+}
+
+footer {
+    background-color: rgb(25, 25, 25);
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    top: 1550px;
+}

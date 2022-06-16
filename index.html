@@ -1,412 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+    <head>
+        <title>GhostRunners25</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="ghost, runners, ghostrunners, projects, follow, about">
-    <meta name="description"
-        content="Learn more about GhostRunners25, such as: who he is, what he does and why he does it. View the most recent projects developed by GhostRunners25 and learn where you can follow him or view more about the projects he develops.">
-    <meta name="author" content="Isaac (GhostRunners25)">
-    <link rel="shortcut icon" type="image/png" href="images/ghost/Ghost_Icon.png">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="doctype html" type="text/html" href="index.html">
-    <link rel="doctype html" type="text/html" href="projects.html">
-    <title>GhostRunners25</title>
-</head>
-<header>
-    <nav>
-        <a href="index.html">
-            <div class="logo">
-                <img src="images/ghost/Ghost_Header.png" alt="GhostRunners25 logo">
-                <h1>GhostRunners25</h1>
-            </div>
-        </a>
-        <div class="menu">
-            <h4 onclick="ScrollPage('follow-expanded')">Follow</h4>
-            <h4 onclick="ScrollPage('projects')">Projects</h4>
-            <h4 onclick="ScrollPage('about')">About</h4>
-        </div>
-    </nav>
-    <div class="menu-container" onclick="MenuButton()">
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-        <div class="hidden-menu" id="hidden-menu">
-            <h4 class="hidden-menu-h4" onclick="ScrollPage('about')">About</h4>
-            <h4 class="hidden-menu-h4" onclick="ScrollPage('projects')">Projects</h4>
-            <h4 class="hidden-menu-h4" onclick="ScrollPage('follow-short')">Follow</h4>
-        </div>
-    </div>
-</header>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="GhostRunners25 - Isaac Butler" />
+        <meta name="keywords" content="GhostRunners25, GR25" />
+        <meta name="description" content="" />
 
-<body>
-    <section class="about">
-        <div id="about"></div>
-        <article>
-            <div class="left">
-                <div class="row-3" id="about-top-title" style="color: rgb(20, 20, 20);" onclick="ActivateTop()">
-                    <h4>Who am I?</h4>
+        <link href="./source/styles/main.css" type="text/css" rel="stylesheet" />
+        <link href="./source/images/icons/ghost-icon.svg" type="x-image/icon" rel="icon" />
+        <script type="text/javascript" src="./source/scripts/change-ghost.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="./source/images/icons/ghost-icon.svg" alt="ghost icon" />
+            <h1>GhostRunners25</h1>
+            <nav>
+                <div class="option" id="about">
+                    <a>About</a>
                 </div>
-                <div class="row-3" style="background-color: rgb(20, 20, 20); color: white;" id="about-middle-title"
-                    onclick="ActivateMiddle()">
-                    <h4>What do I do?</h4>
+                <div class="option" id="projects">
+                    <a>Projects</a>
                 </div>
-                <div class="row-3" id="about-bottom-title" style="color: rgb(20, 20, 20);" onclick="ActivateBottom()">
-                    <h4>Why do I do it?</h4>
+                <div class="option" id="media">
+                    <a>Media</a>
                 </div>
-                <div class="fill" id="about-top-fill" onclick="DeactivateTop()">
-                    <p>I'm an 19-year-old with a passion for programming. I began my programming journey back in 2016;
-                        I'd be lying if I said programming instantly became my passion. I found programming quite
-                        difficult in the beginning. I started with HTML, and all I was able to do was display text in
-                        various colours. After lots of practice I've become better and better at it.<br><br>However,
-                        programming isn't all my life is. I love going on long walks and exploring the world around
-                        me.<br><br>Oh, and my name is Isaac :D</p>
+            </nav>
+        </header>
+        <section>
+            <article id="about">
+                <h3>About</h3>
+                <div class="box">
+                    <h5>Who am I?</h5>
+                    <p>
+                        I'm a junior software engineer who has been passionate about programming
+                        since the age of 13. I've spent the majority of my time writing code,
+                        solving bugs, and living in my imagination.
+                    </p>
+                    <p>
+                        However, that's not all I enjoy. Going on long walks is a peaceful escape
+                        from the digital world. I also love animals.
+                    </p>
+                    <h5>What do I do?</h5>
+                    <p>
+                        I work on personal projects. I have started many, but finished few. Let's
+                        journey over some of these projects together.
+                    </p>
                 </div>
-                <div class="fill" id="about-middle-fill" style="background-color: rgb(20, 20, 20);"
-                    onclick="DeactivateMiddle()">
-                    <p style="color: white;">I'm a programmer. I mainly code in the languages Python, C#, HTML, CSS,
-                        JavaScript and Java. I practice coding daily; I always ensure I have a project to develop. I
-                        develop projects ranging in the development of software, video games and occasionally
-                        websites.<br><br>Currently, the only projects I have released are video games. However, I plan
-                        to start releasing some software soon. All the projects will be showcased in the <a
-                            style="text-decoration: underline;" onclick="ScrollPage('projects')">projects section</a> of
-                        this page.</p>
+                <button>Begin Journey</button>
+                <div class="box">
+                    <img src="./source/images/icons/ghost-icon.svg" id="ghostie" alt="ghostie" />
                 </div>
-                <div class="fill" id="about-bottom-fill" onclick="DeactivateBottom()">
-                    <p>I do it because I love it. I love it because it allows you to build your imagination, granted
-                        sometimes at the cost of your sanity. However, the feeling you get when your project finally
-                        starts taking shape makes it all worth it. It's such a euphoric feeling.<br><br>When I'm doing
-                        game development and for that I would usually design a sprite sheet. Each time I needed to save
-                        the sprites individually, which sometimes takes longer than an hour. I saw that as an issue, so
-                        I developed a simple software that would do it for me in seconds. That's another reason I love
-                        it; It gives you the ability to build solutions to problems.</p>
+            </article>
+            <article id="projects">
+                <h3>Projects</h3>
+                <div class="box">
+                    <img src="" id="slideshow" alt="image of a project" />
                 </div>
-            </div>
-            <div class="right">
-                <img src="images/ghost/Ghost_Plain.png" alt="GhostRunners25 logo" id="a-img">
-            </div>
-        </article>
-    </section>
-    <section class="projects">
-        <div id="projects"></div>
-        <article>
-            <div class="left" id="p-left">
-                <img src="images/projects/games/Pinky.png" alt="Images of projects" id="p-img">
-            </div>
-            <div class="right">
-                <h2>Recent activity</h2>
-                <div class="project-section">
-                    <img src="images/projects/games/Pinky.png" alt="Pinky's Adventure icon">
-                    <h4>Pinky's Adventure</h4>
+                <div class="box">
+                    <h5>What type of projects?</h5>
+                    <p>I start projects ranging from games, software, websites, and more.</p>
+                    <h5>Are there going to be more?</h5>
+                    <p>
+                        Yes. At the moment, only a few projects are released. I'm planning to
+                        improve this by following a more disciplined ethic towards this hobby.
+                    </p>
+                    <h5>Where can I find them?</h5>
+                    <p>
+                        After exploring the projects. You'll notice each project has a dedicated
+                        page providing: status, details, where to play, etc.
+                    </p>
                 </div>
-                <div class="project-section">
-                    <img src="images/projects/games/Crystal.png" alt="Pinky's Adventure icon">
-                    <h4>Crystal Turrets</h4>
-                </div>
-                <div class="button"><a href="projects.html">View all projects</a></div>
-            </div>
-        </article>
-    </section>
-    <div class="expanded">
-        <div id="follow-expanded"></div>
-        <section class="follow">
-            <article>
-                <a href="https://twitter.com/GhostRunners25" target="_blank">
-                    <div class="column-3">
-                        <img src="images/social-media/Twitter_Logo_Blue.png" alt="Twitter logo" id="twitter">
-                        <hr>
-                        <h2>Twitter</h2>
-                        <h4>No content has been released yet. Content will be coming soon.</h4>
-                    </div>
-                </a>
-                <a href="https://www.youtube.com/channel/UCugRE7l16EwGU9EwLtEAl-A" target="_blank">
-                    <div class="column-3" id="column-3-center">
-                        <img src="images/social-media/yt_icon_rgb.png" alt="YouTube logo" id="youtube">
-                        <hr>
-                        <h2>YouTube</h2>
-                        <h4>No content has been released yet. Content will be coming soon.</h4>
-                    </div>
-                </a>
-                <a href="https://www.instagram.com/ghostrunners25/" target="_blank">
-                    <div class="column-3">
-                        <img src="images/social-media/IG_Glyph_Fill.png" alt="Instagram logo" id="instagram">
-                        <hr>
-                        <h2>Instagram</h2>
-                        <h4>No content has been released yet. Content will be coming soon.</h4>
-                    </div>
-                </a>
+                <button>Explore</button>
+            </article>
+            <article id="media">
+                <h3>Media</h3>
             </article>
         </section>
-        <section class="follow">
-            <article>
-                <a href="https://ghostrunners25.itch.io" target="_blank">
-                    <div class="column-2" id="column-2-left">
-                        <img src="images/social-media/itchio-logo-textless-white.png" alt="Itch.io logo" id="itch-io">
-                        <hr>
-                        <h2>Itch.io</h2>
-                        <h4>Find out extra information about projects such as devlogs, screenshots and download links.
-                        </h4>
-                    </div>
-                </a>
-                <a href="https://github.com/GhostRunners25" target="_blank">
-                    <div class="column-2" id="column-2-right">
-                        <img src="images/social-media/GitHub-Mark.png" alt="GitHub logo" id="github">
-                        <hr>
-                        <h2>GitHub</h2>
-                        <h4>View and download the source code of released projects.</h4>
-                    </div>
-                </a>
-            </article>
-        </section>
-    </div>
-    <div class="short">
-        <div id="follow-short"></div>
-        <section class="follow">
-            <article>
-                <a href="https://twitter.com/GhostRunners25" target="_blank">
-                    <div class="small-3">
-                        <img src="images/social-media/Twitter_Logo_Blue.png" alt="Twitter logo" id="twitter">
-                    </div>
-                </a>
-                <a href="https://www.youtube.com/channel/UCugRE7l16EwGU9EwLtEAl-A" target="_blank">
-                    <div class="small-3">
-                        <img src="images/social-media/yt_icon_rgb.png" alt="YouTube logo" id="youtube">
-                    </div>
-                </a>
-                <a href="https://www.instagram.com/ghostrunners25/" target="_blank">
-                    <div class="small-3">
-                        <img src="images/social-media/IG_Glyph_Fill.png" alt="Instagram logo" id="instagram">
-                    </div>
-                </a>
-            </article>
-        </section>
-        <section class="follow">
-            <article>
-                <a href="https://ghostrunners25.itch.io" target="_blank">
-                    <div class="small-2">
-                        <img src="images/social-media/itchio-logo-textless-white.png" alt="Itch.io logo" id="itch-io">
-                    </div>
-                </a>
-                <a href="https://github.com/GhostRunners25" target="_blank">
-                    <div class="small-2">
-                        <img src="images/social-media/GitHub-Mark.png" alt="GitHub logo" id="github">
-                    </div>
-                </a>
-            </article>
-        </section>
-    </div>
-</body>
-<footer>
-    <h4 id="footer-left"><a href="privacy-policies/website-privacy-policy.html" target="_blank">Privacy policy</a></h4>
-    <h4 id="footer-right"><a href="https://github.com/GhostRunners25/ghostrunners25.github.io" target="_blank">Source
-            code</a></h4>
-    <h4 id="footer-middle">By Isaac (GhostRunners25)</h4>
-</footer>
-<script>
-    var ScrollInterval;
-    var ScrollHeight;
-    var Below = false;
-
-    var MenuFlag = false;
-    var MenuElement = document.getElementById("hidden-menu");
-    var MenuHeight = "140px";
-    var MenuButtonElements = document.getElementsByClassName("menu-line");
-    var MenuButtonMargin = MenuButtonElements[0].style.margin;
-    var MenuButoonText = document.getElementsByClassName("hidden-menu-h4");
-
-    var AboutTopTitle = document.getElementById("about-top-title");
-    var AboutMiddleTitle = document.getElementById("about-middle-title");
-    var AboutBottomTitle = document.getElementById("about-bottom-title");
-    var AboutTopFill = document.getElementById("about-top-fill");
-    var AboutMiddleFill = document.getElementById("about-middle-fill");
-    var AboutBottomFill = document.getElementById("about-bottom-fill");
-
-    var AboutImageList = ["images/ghost/Ghost_Plain.png", "images/ghost/Ghost_Pixel.png", "images/ghost/Ghost_Mix.png", "images/ghost/Ghost_Colour.png"];
-    var AboutImageIndex = 0;
-    var AboutImageElement = document.getElementById("a-img");
-
-    var ProjectsImageList = ["images/projects/games/Pinky.png", "images/projects/games/Crystal.png", "images/projects/games/Time.png", "images/projects/games/Industrial.png"];
-    var ProjectsImageIndex = 0;
-    var ProjectsImageElement = document.getElementById("p-img");
-
-    var AboutImageFaded = false;
-    var ProjectsImageFaded = false;
-
-    function Update() {
-
-    }
-
-    function MenuButton() {
-        MenuFlag = !MenuFlag;
-        if (MenuFlag) {
-            for (var i = 0; i < MenuButtonElements.length; i++) {
-                MenuButtonElements[i].style.transition = "0.2s ease";
-                MenuButtonElements[i].style.margin = "7px 0px";
-            }
-            MenuElement.style.visibility = "visible";
-            MenuElement.style.transition = "0.2s ease";
-            MenuElement.style.height = MenuHeight;
-            for (var i = 0; i < MenuButoonText.length; i++) {
-                MenuButoonText[i].style.transition = "0.4s ease";
-                MenuButoonText[i].style.opacity = "1";
-            }
-        }
-        else {
-            MenuButtonClose();
-        }
-    }
-
-    function MenuButtonClose() {
-        MenuFlag = false;
-        for (var i = 0; i < MenuButoonText.length; i++) {
-            MenuButoonText[i].style.transition = "0.1s ease";
-            MenuButoonText[i].style.opacity = "0";
-        }
-        MenuElement.style.transition = "0.2s ease";
-        MenuElement.style.height = 0;
-        MenuElement.style.visibility = "hidden";
-        for (var i = 0; i < MenuButtonElements.length; i++) {
-            MenuButtonElements[i].style.transition = "0.2s ease";
-            MenuButtonElements[i].style.margin = "5px 0px";
-        }
-    }
-
-    function ScrollPage(Type) {
-        clearInterval(ScrollInterval);
-        ScrollHeight = document.getElementById(Type).offsetTop;
-        Above = window.pageYOffset < ScrollHeight;
-        ScrollInterval = setInterval(ScrollTo, 0);
-    }
-
-    function ScrollTo() {
-        if (window.pageYOffset < ScrollHeight && Above) {
-            window.scrollBy(0, 6);
-        }
-        else if (window.pageYOffset >= ScrollHeight && Above) {
-            clearInterval(ScrollInterval);
-        }
-        if (window.pageYOffset > ScrollHeight && !Above) {
-            window.scrollBy(0, -6);
-        }
-        else if (window.pageYOffset < ScrollHeight && !Above) {
-            clearInterval(ScrollInterval);
-        }
-    }
-
-    function FadeOutAboutTitles() {
-        AboutTopTitle.style.transition = "0.25s ease";
-        AboutMiddleTitle.style.transition = "0.25s ease";
-        AboutBottomTitle.style.transition = "0.25s ease";
-        AboutTopTitle.style.opacity = "0";
-        AboutMiddleTitle.style.opacity = "0";
-        AboutBottomTitle.style.opacity = "0";
-        AboutTopTitle.style.visibility = "hidden";
-        AboutMiddleTitle.style.visibility = "hidden";
-        AboutBottomTitle.style.visibility = "hidden";
-    }
-
-    function FadeInAboutTitles() {
-        AboutTopTitle.style.transition = "0.5s ease";
-        AboutMiddleTitle.style.transition = "0.5s ease";
-        AboutBottomTitle.style.transition = "0.5s ease";
-        AboutTopTitle.style.visibility = "visible";
-        AboutMiddleTitle.style.visibility = "visible";
-        AboutBottomTitle.style.visibility = "visible";
-        AboutTopTitle.style.opacity = "1";
-        AboutMiddleTitle.style.opacity = "1";
-        AboutBottomTitle.style.opacity = "1";
-    }
-
-    function ActivateTop() {
-        FadeOutAboutTitles();
-        AboutTopFill.style.transition = "0.5s ease";
-        AboutTopFill.style.visibility = "visible";
-        AboutTopFill.style.opacity = 1;
-    }
-
-    function DeactivateTop() {
-        AboutTopFill.style.transition = "0.25s ease";
-        AboutTopFill.style.opacity = "0";
-        AboutTopFill.style.visibility = "hidden";
-        FadeInAboutTitles();
-    }
-
-    function ActivateMiddle() {
-        FadeOutAboutTitles();
-        AboutMiddleFill.style.transition = "0.5s ease";
-        AboutMiddleFill.style.visibility = "visible";
-        AboutMiddleFill.style.opacity = 1;
-    }
-
-    function DeactivateMiddle() {
-        AboutMiddleFill.style.transition = "0.25s ease";
-        AboutMiddleFill.style.opacity = "0";
-        AboutMiddleFill.style.visibility = "hidden";
-        FadeInAboutTitles();
-    }
-
-    function ActivateBottom() {
-        FadeOutAboutTitles();
-        AboutBottomFill.style.transition = "0.5s ease";
-        AboutBottomFill.style.visibility = "visible";
-        AboutBottomFill.style.opacity = 1;
-    }
-
-    function DeactivateBottom() {
-        AboutBottomFill.style.transition = "0.25s ease";
-        AboutBottomFill.style.opacity = "0";
-        AboutBottomFill.style.visibility = "hidden";
-        FadeInAboutTitles();
-    }
-
-    function ChangeAboutImage() {
-        AboutImageIndex++;
-        if (AboutImageIndex >= AboutImageList.length) {
-            AboutImageIndex = 0;
-        }
-        AboutImageElement.src = AboutImageList[AboutImageIndex];
-        AboutImageElement.style.opacity = "1";
-    }
-
-    function ActivateAbout() {
-        if (!AboutImageFaded) {
-            AboutImageElement.style.opacity = "0";
-            AboutImageFaded = true;
-            setTimeout(ActivateAbout, 1000);
-        }
-        else {
-            ChangeAboutImage();
-            AboutImageFaded = false;
-            setTimeout(ActivateAbout, 6000);
-        }
-    }
-
-    function ChangeProjectsImage() {
-        ProjectsImageIndex++;
-        if (ProjectsImageIndex >= ProjectsImageList.length) {
-            ProjectsImageIndex = 0;
-        }
-        ProjectsImageElement.src = ProjectsImageList[ProjectsImageIndex];
-        ProjectsImageElement.style.opacity = "1";
-    }
-
-    function ActivateProjects() {
-        if (!ProjectsImageFaded) {
-            ProjectsImageElement.style.opacity = "0";
-            ProjectsImageFaded = true;
-            setTimeout(ActivateProjects, 1000);
-        }
-        else {
-            ChangeProjectsImage();
-            ProjectsImageFaded = false;
-            setTimeout(ActivateProjects, 6000);
-        }
-    }
-
-    setTimeout(ActivateProjects, 6000);
-    setTimeout(ActivateAbout, 6000);
-    setInterval(Update, 1000 / 240);
-</script>
-
+        <footer></footer>
+    </body>
 </html>

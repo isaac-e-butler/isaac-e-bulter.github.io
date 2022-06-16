@@ -1,0 +1,25 @@
+/* header */
+
+nav div#media {
+    right: 0px;
+}
+
+nav div#media.active,
+nav div#media:hover {
+    background-color: rgb(74, 74, 207);
+}
+
+/* article */
+
+article#media {
+    height: 400px;
+    width: 800px;
+    top: 940px;
+}
+
+article#media h3 {
+    background-color: rgb(74, 74, 207);
+    transform: translateX(-50%);
+    top: -20px;
+    left: 50%;
+}
