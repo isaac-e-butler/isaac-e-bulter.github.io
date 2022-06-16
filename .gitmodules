@@ -1,0 +1,7 @@
+[submodule "maze-game"]
+	path = ../maze-game
+	url = https://github.com/GhostRunners25/maze-game.git
+
+[submodule "lower"]
+	path = ./lower
+	url = https://github.com/GhostRunners25/lower.git
