@@ -1,25 +1,32 @@
 /* header */
 
-nav div#media {
+nav div#extra {
     right: 0px;
 }
 
-nav div#media.active,
-nav div#media:hover {
+nav div#extra.active,
+nav div#extra:hover {
     background-color: rgb(74, 74, 207);
 }
 
 /* article */
 
-article#media {
+article#extra {
     height: 400px;
     width: 800px;
     top: 940px;
 }
 
-article#media h3 {
+article#extra h3 {
     background-color: rgb(74, 74, 207);
     transform: translateX(-50%);
     top: -20px;
     left: 50%;
+}
+
+article#extra h5 {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
