@@ -2,6 +2,7 @@
 
 @import url('./header.css');
 @import url('./article.css');
+@import url('./footer.css');
 
 @import url('./about.css');
 @import url('./projects.css');
@@ -22,10 +23,3 @@ section {
     top: 140px;
 }
 
-footer {
-    background-color: rgb(25, 25, 25);
-    position: absolute;
-    height: 100px;
-    width: 100%;
-    top: 1550px;
-}
