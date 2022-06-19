@@ -27,6 +27,7 @@ article#extra h3 {
 article#extra h5 {
     transform: translate(-50%, -50%);
     position: absolute;
+    margin: 0px;
     left: 50%;
     top: 50%;
 }

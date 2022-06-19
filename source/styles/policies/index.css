@@ -1,0 +1,30 @@
+@import url('../fonts/font.css');
+
+html, body {
+    background-color: rgb(25, 25, 25);
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    top: 50%;
+}
+
+p {
+    margin: 15px;
+}
+
+div.links {
+    margin-left: 45px;
+    
+}
+
+div.links a {
+    display: flex;
+    margin: 5px 0px;
+}

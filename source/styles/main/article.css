@@ -25,13 +25,11 @@ article img {
 article h5 {
     margin: 0px 0px 10px 0px;
     font-family: 'bold';
-    font-size: 18px;
     padding: 0px;
 }
 
 article p {
     margin: 0px 0px 10px 20px;
-    font-size: 14px;
     padding: 0px;
 }
 
@@ -43,7 +41,6 @@ article button {
     text-align: center;
     user-select: none;
     line-height: 40px;
-    font-size: 22px;
     height: 40px;
     width: 200px;
     padding: 0px;

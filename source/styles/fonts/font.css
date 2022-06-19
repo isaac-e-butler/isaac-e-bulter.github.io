@@ -18,7 +18,35 @@
     src: url('./ubuntu-mono-bold-italic.ttf');
 }
 
-html {
+html, a {
     color: rgb(255, 255, 255);
     font-family: 'regular';
+}
+
+b {
+    font-family: 'bold';
+}
+
+i {
+    font-family: 'italic';
+}
+
+b i, i b {
+    font-family: 'bold-italic';
+}
+
+p {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h3, button {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 18px;
 }

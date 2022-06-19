@@ -16,10 +16,6 @@ header img {
     width: auto;
 }
 
-header h1 {
-    font-size: 40px;
-}
-
 header h1,
 nav div.option {
     line-height: 70px;
@@ -31,9 +27,8 @@ nav div.option {
     clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
     background-color: rgb(55, 55, 55);
     transition: ease 0.25s;
-    font-family: 'bold';
     position: absolute;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     height: 80px;
     width: 150px;

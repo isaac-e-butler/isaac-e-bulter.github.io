@@ -10,7 +10,7 @@ footer .social-media {
     transform: translateY(-50%);
     position: absolute;
     user-select: none;
-    right: 25px;
+    right: 35px;
     top: 50%;
 }
 
@@ -22,6 +22,15 @@ footer img {
     width: auto;
 }
 
-footer .social-media a {
+footer a {
     text-decoration: none;
+}
+
+footer h5 {
+    transform: translateY(-50%);
+    position: absolute;
+    user-select: none;
+    margin: 0px;
+    left: 35px;
+    top: 50%;
 }
