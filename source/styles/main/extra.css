@@ -25,3 +25,11 @@ article#extra h5 {
         top: 1740px;
     }
 }
+
+@media screen and (max-width: 425px) 
+{
+    article#extra {
+        height: 350px;
+        top: 1690px;
+    }
+}

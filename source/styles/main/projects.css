@@ -27,3 +27,15 @@ article#projects button {
         top: 50%;
     }
 }
+
+@media screen and (max-width: 425px) 
+{
+    article#projects {
+        height: 750px;
+    }
+
+    article#projects div.l-box {
+        top: calc(50% + 25px);
+        height: 350px;
+    }
+}

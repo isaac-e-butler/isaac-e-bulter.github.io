@@ -26,11 +26,14 @@ article div.r-box {
 }
 
 article img {
+    transform: translate(-50%, -50%);
     -webkit-user-drag: none;
+    position: absolute;
     user-select: none;
     height: 320px;
     width: 320px;
-    top: 40px;
+    left: 50%;
+    top: 50%;
 }
 
 article h5 {
@@ -88,5 +91,23 @@ article button:active {
     article div.l-box,
     article div.r-box {
         left: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) 
+{
+    article {
+        height: 800px;
+        width: 350px;
+    }
+
+    article div.l-box,
+    article div.r-box {
+        width: 350px;
+        left: 50%;
+    }
+
+    article button {
+        bottom: 16px;
     }
 }
