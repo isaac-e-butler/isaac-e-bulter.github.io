@@ -1,19 +1,5 @@
-/* header */
-
-nav div#about {
-    right: 280px;
-}
-
-nav div#about.active,
-nav div#about:hover {
-    background-color: rgb(207, 74, 74);
-}
-
-/* article */
-
 article#about {
-    height: 400px;
-    width: 800px;
+    top: 0px;
 }
 
 article#about h3 {
@@ -22,12 +8,18 @@ article#about h3 {
     top: -20px;
 }
 
-article#about div.box {
+article#about div.l-box {
     text-align: left;
 }
 
 article#about button {
     background-color: rgb(207, 74, 74);
     border-color: rgb(147, 47, 47);
-    left: 25%;
+}
+
+@media screen and (max-width: 850px) 
+{
+    article#about div.r-box {
+        top: 50%;
+    }
 }

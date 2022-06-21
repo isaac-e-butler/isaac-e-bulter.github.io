@@ -1,19 +1,5 @@
-/* header */
-
-nav div#extra {
-    right: 0px;
-}
-
-nav div#extra.active,
-nav div#extra:hover {
-    background-color: rgb(74, 74, 207);
-}
-
-/* article */
-
 article#extra {
-    height: 400px;
-    width: 800px;
+    background-color: rgb(25, 25, 25);
     top: 940px;
 }
 
@@ -30,4 +16,12 @@ article#extra h5 {
     margin: 0px;
     left: 50%;
     top: 50%;
+}
+
+@media screen and (max-width: 850px) 
+{
+    article#extra {
+        height: 400px;
+        top: 1740px;
+    }
 }

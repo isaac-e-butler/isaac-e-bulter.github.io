@@ -1,19 +1,4 @@
-/* header */
-
-nav div#projects {
-    right: 140px;
-}
-
-nav div#projects.active,
-nav div#projects:hover {
-    background-color: rgb(74, 207, 74);
-}
-
-/* article */
-
 article#projects {
-    height: 400px;
-    width: 800px;
     top: 470px;
 }
 
@@ -23,12 +8,22 @@ article#projects h3 {
     top: -20px;
 }
 
-article#projects div.box {
+article#projects div.r-box {
     text-align: left;
 }
 
 article#projects button {
     background-color: rgb(74, 207, 74);
     border-color: rgb(47, 147, 47);
-    left: 75%;
+}
+
+@media screen and (max-width: 850px) 
+{
+    article#projects {
+        top: 870px;
+    }
+
+    article#projects div.l-box {
+        top: 50%;
+    }
 }

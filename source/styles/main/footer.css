@@ -6,7 +6,7 @@ footer {
     top: 1550px;
 }
 
-footer .social-media {
+footer div.social-media {
     transform: translateY(-50%);
     position: absolute;
     user-select: none;
@@ -33,4 +33,26 @@ footer h5 {
     margin: 0px;
     left: 35px;
     top: 50%;
+}
+
+@media screen and (max-width: 850px) 
+{
+    footer {
+        height: 120px;
+        top: 2350px;
+    }
+
+    footer h5, footer div.social-media {
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    footer div.social-media {
+        width: 100%;
+        top: 20px;
+    }
+
+    footer h5 {
+        top: 80px;
+    }
 }
