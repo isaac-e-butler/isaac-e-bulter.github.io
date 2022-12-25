@@ -1,102 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>GhostRunners25</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="GhostRunners25 - Isaac Butler" />
-        <meta name="keywords" content="GhostRunners25, GR25" />
+        <meta name="keywords" content="ghostrunners25, gr25" />
         <meta name="description" content="" />
 
         <link href="./source/styles/main/index.css" type="text/css" rel="stylesheet" />
-        <link href="./source/images/icons/ghost-icon.svg" type="x-image/icon" rel="icon" />
+        <link href="./source/images/icons/ghost-slim-icon.svg" type="x-image/icon" rel="icon" />
 
         <script type="module" src="./index.js"></script>
     </head>
+
     <body>
         <header>
-            <div class="container">
-                <img src="./source/images/icons/ghost-icon.svg" alt="ghost icon" />
-                <h1>GhostRunners25</h1>
-            </div>
+            <img src="./source/images/icons/ghost-slim-icon.svg" alt="logo" draggable="false" />
+            <h1>GhostRunners25</h1>
         </header>
-        <section>
-            <article id="about">
-                <div class="l-box">
-                    <h3>About</h3>
-                    <h5>Who am I?</h5>
-                    <p>
-                        I'm a junior software engineer who has been passionate about programming since the age
-                        of 13. I've spent the majority of my time writing code, solving bugs, and living in my
-                        imagination.
-                    </p>
-                    <p>
-                        However, that's not all I enjoy. Going on long walks is a peaceful escape from the
-                        digital world. I also love animals.
-                    </p>
-                    <h5>What do I do?</h5>
-                    <p>
-                        I work on personal projects. I have started many, but finished few. Let's journey over
-                        some of these projects together.
-                    </p>
-                    <button>Coming Soon</button>
-                    <!-- <button>Begin Journey</button> -->
-                </div>
-                <div class="r-box">
-                    <img src="./source/images/icons/ghost-icon.svg" id="ghostie" alt="ghostie" />
-                </div>
-            </article>
-            <article id="projects">
-                <div class="l-box">
-                    <img src="" id="slide-show" alt="image of a project" />
-                </div>
-                <div class="r-box">
-                    <h3>Projects</h3>
-                    <h5>What type of projects?</h5>
-                    <p>I start projects ranging from games, software, websites, and more.</p>
-                    <h5>Are they available?</h5>
-                    <p>
-                        Yes. Currently, only one project is available on here. I'm planning to improve this by
-                        following a more disciplined ethic towards this hobby.
-                    </p>
-                    <h5>Where can I find them?</h5>
-                    <p>
-                        After exploring the projects. You'll notice each project has a dedicated page
-                        providing: status, details, where to play, etc.
-                    </p>
-                    <button>Coming Soon</button>
-                    <!-- <button>Explore</button> -->
-                </div>
-            </article>
-            <article id="extra">
-                <h3>Extra</h3>
-                <h5>Coming Soon</h5>
-            </article>
+        <section id="projects">
+            <div id="project-header">
+                <input type="text" id="project-search" placeholder="project search" title="search all projects" />
+                <a role="link" href="./projects/" target="_blank" title="view all projects">view all</a>
+            </div>
+            <div id="project-grid"></div>
         </section>
         <footer>
-            <div class="social-media">
-                <a href="https://github.com/GhostRunners25/" target="_blank">
-                    <img src="./source/images/social-media/github-white.png" alt="GitHub" />
-                </a>
-                <a href="https://ghostrunners25.itch.io/" target="_blank">
-                    <img src="./source/images/social-media/itchio-white.png" alt="Itch.io" />
-                </a>
-                <a href="https://www.linkedin.com/in/isaac-butler/" target="_blank">
-                    <img src="./source/images/social-media/linkedin-white.png" alt="LinkedIn" />
-                </a>
-                <a href="https://twitter.com/GhostRunners25/" target="_blank">
-                    <img src="./source/images/social-media/twitter-white.png" alt="Twitter" />
-                </a>
-                <a href="https://www.instagram.com/ghostrunners25/" target="_blank">
-                    <img src="./source/images/social-media/instagram-white.png" alt="Instagram" />
-                </a>
-                <a href="https://www.youtube.com/channel/UCugRE7l16EwGU9EwLtEAl-A" target="_blank">
-                    <img src="./source/images/social-media/youtube-white.png" alt="YouTube" />
-                </a>
-            </div>
-            <a href="./privacy-policy/" target="_blank">
-                <h5>Privacy Policy</h5>
-            </a>
+            <a role="link" href="./privacy-policy/" target="_blank" title="view privacy policy">privacy policy</a>
+            <div id="social-media"></div>
         </footer>
     </body>
 </html>

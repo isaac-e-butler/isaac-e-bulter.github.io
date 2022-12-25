@@ -1,3 +1,5 @@
+/* #region font-face */
+
 @font-face {
     font-family: 'regular';
     src: url('./ubuntu-mono-regular.ttf');
@@ -18,7 +20,9 @@
     src: url('./ubuntu-mono-bold-italic.ttf');
 }
 
-html, a {
+/* #endregion font-face */
+
+html, body, input, a {
     color: rgb(255, 255, 255);
     font-family: 'regular';
 }
@@ -35,18 +39,37 @@ b i, i b {
     font-family: 'bold-italic';
 }
 
-p {
-    font-size: 14px;
-}
-
 h1 {
     font-size: 40px;
 }
 
-h3, button {
-    font-size: 22px;
+p, a {
+    font-size: 14px;
 }
 
-h5 {
-    font-size: 18px;
+input {
+    font-size: 16px;
+}
+
+a[role=link] {
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+input[type=text], 
+a[role=link] {
+    background-color: rgb(47, 47, 47);
+    border-radius: 10px;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    height: 14px;
+}
+
+input[type=text]:hover,
+input[type=text]:focus,
+a[role=link]:hover,
+a[role=link]:focus {
+    background-color: rgb(57, 57, 57);
 }

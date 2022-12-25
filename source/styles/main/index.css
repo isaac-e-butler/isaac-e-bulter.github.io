@@ -1,25 +1,12 @@
 @import url('../fonts/index.css');
-
 @import url('./header.css');
-@import url('./article.css');
 @import url('./footer.css');
 
-@import url('./about.css');
-@import url('./projects.css');
-@import url('./extra.css');
-
-@import url('./animations.css');
+@import url('./project.css');
 
 html, body {
-    background-color: rgb(80, 80, 80);
-    text-align: center;
+    background-color: rgb(25 25 25);
+    user-select: none;
     padding: 0px;
     margin: 0px;
 }
-
-section {
-    position: absolute;
-    width: 100%;
-    top: 140px;
-}
-
