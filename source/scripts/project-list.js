@@ -1,10 +1,5 @@
 export default [
     {
-        title: 'MAZE GAME',
-        icon: 'maze-game-icon.png',
-        link: './projects/maze-game',
-    },
-    {
         title: 'Mining game',
         icon: 'maze-game-icon.png',
         link: './projects/maze-game',
@@ -39,4 +34,9 @@ export default [
         icon: 'maze-game-icon.png',
         link: './projects/maze-game',
     },
+    {
+        title: 'MAZE GAME',
+        icon: 'maze-game-icon.png',
+        link: './projects/maze-game',
+    }
 ];
