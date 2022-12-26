@@ -5,9 +5,9 @@ export default function() {
     const grid = document.getElementById('project-grid');
     let previousQuery = autoSearch(grid, search);
 
-    search.addEventListener('input', () => {
-        previousQuery = autoSearch(grid, search, previousQuery);
-    });
+    search.addEventListener('input', () => 
+        previousQuery = autoSearch(grid, search, previousQuery)
+    );
 }
 
 function autoSearch(grid, search, previousQuery) {
@@ -27,7 +27,7 @@ function autoSearch(grid, search, previousQuery) {
 const filteredList = (query) => {
     if (!query) return list;
 
-    const separateWords = (words) => words.toLowerCase().split(' ');
+    const separateWords = (words) => words.toLowerCase().split(' ').filter(w => w);
     const queryWords = separateWords(query);
 
     return list.filter(project => 
