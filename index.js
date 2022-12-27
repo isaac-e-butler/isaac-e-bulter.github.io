@@ -1,12 +1,12 @@
-import projectAutoSearch from './source/scripts/project-auto-search.js';
+import StartAutoSearch from './source/scripts/project-auto-search.js';
 import socialList from './source/scripts/social-media.js';
 
 window.onload = () => {
-    generateSocialMedia();
-    projectAutoSearch();
+    GenerateSocialMedia();
+    StartAutoSearch();
 };
 
-function generateSocialMedia() {
+function GenerateSocialMedia() {
     socialList.forEach(s =>
         document.getElementById('social-media').innerHTML += `
             <a href="${s.link}" target="_blank">

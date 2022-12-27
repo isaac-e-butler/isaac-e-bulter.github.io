@@ -10,13 +10,13 @@ export default function() {
     );
 }
 
-function autoSearch(grid, search, previousQuery) {
+const autoSearch = (grid, search, previousQuery) => {
     const query = search.value.toLowerCase();
 
     if (query !== previousQuery) {
         grid.innerHTML = '';
-        console.log(filteredList(query));
-        filteredList(query).forEach(project => 
+        
+        updateList(query).forEach(project => 
             generateHTML(grid, project)
         );
     }
@@ -24,7 +24,7 @@ function autoSearch(grid, search, previousQuery) {
     return query;
 }
 
-const filteredList = (query) => {
+const updateList = (query) => {
     if (!query) return list;
 
     const separateWords = (words) => words.toLowerCase().split(' ').filter(w => w);
