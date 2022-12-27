@@ -27,24 +27,23 @@ const autoSearch = (grid, search, previousQuery) => {
 const updateList = (query) => {
     if (!query) return list;
 
-    const separateWords = (words) => words.toLowerCase().split(' ').filter(w => w);
-    const queryWords = separateWords(query);
+    const splitToLower = (words) => words.toLowerCase().split(' ').filter(w => w);
+    const totalWords = (words) => words.split(' ').filter(w => w).length;
+    const queryWords = splitToLower(query);
 
     return list
         .map(project => {
-            const projectWords = separateWords(project.title);
             let match = 0;
 
             const applyWeight = (i, w) => (1 - ((i - match) / queryWords.length)) * w;
 
-            projectWords.forEach(fullProjectWord => queryWords.forEach((queryWord, queryIndex) => {
+            splitToLower(project.title).forEach(fullProjectWord => queryWords.forEach((queryWord, i) => {
                 const partialProjectWord = fullProjectWord.slice(0, queryWord.length);
-                match += queryWord === fullProjectWord ? applyWeight(queryIndex, 1.0)
-                    : queryWord === partialProjectWord ? applyWeight(queryIndex, 0.5) : 0;
+                match += queryWord === fullProjectWord ? applyWeight(i, 1.0)
+                    : queryWord === partialProjectWord ? applyWeight(i, 0.5) : 0;
             }));
 
-            const validity = match / projectWords.length;
-            if (validity) return { ...project, validity };
+            if (match) return { ...project, validity: match / totalWords(project.title) };
         })
         .filter(p => p)
         .sort((a, b) => b.validity - a.validity);
