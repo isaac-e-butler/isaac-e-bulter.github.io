@@ -15,7 +15,7 @@ function autoSearch(grid, search, previousQuery) {
 
     if (query !== previousQuery) {
         grid.innerHTML = '';
-
+        console.log(filteredList(query));
         filteredList(query).forEach(project => 
             generateHTML(grid, project)
         );
@@ -30,13 +30,24 @@ const filteredList = (query) => {
     const separateWords = (words) => words.toLowerCase().split(' ').filter(w => w);
     const queryWords = separateWords(query);
 
-    return list.filter(project => 
-        separateWords(project.title).some(projectWord => queryWords.some(queryWord =>
-            queryWord === projectWord.slice(0, queryWord.length)
-        ))
-    );
+    return list
+        .map(project => {
+            const projectWords = separateWords(project.title);
+            let match = 0;
 
-    // attach sorting index, to make better matches higher
+            const applyWeight = (i, w) => (1 - ((i - match) / queryWords.length)) * w;
+
+            projectWords.forEach(fullProjectWord => queryWords.forEach((queryWord, queryIndex) => {
+                const partialProjectWord = fullProjectWord.slice(0, queryWord.length);
+                match += queryWord === fullProjectWord ? applyWeight(queryIndex, 1.0)
+                    : queryWord === partialProjectWord ? applyWeight(queryIndex, 0.5) : 0;
+            }));
+
+            const validity = match / projectWords.length;
+            if (validity) return { ...project, validity };
+        })
+        .filter(p => p)
+        .sort((a, b) => b.validity - a.validity);
 }
 
 const generateHTML = (grid, p) =>
