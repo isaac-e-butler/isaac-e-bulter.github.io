@@ -49,12 +49,12 @@ const updateList = (query) => {
         .sort((a, b) => b.validity - a.validity);
 }
 
-const generateHTML = (grid, p) =>
+const generateHTML = (grid, project) =>
     grid.innerHTML += `
-        <a role="option" href="${p.link}" target="_blank" title="${p.title}">
+        <a role="option" href="${project.link}" target="_blank" title="${project.title}">
             <img 
-                src="./source/images/projects/${p.icon}"
-                alt="${p.title} - icon" 
+                src="./source/images/projects/${project.icon}"
+                alt="${project.title} - icon" 
                 draggable="false" 
             />
         </a>
