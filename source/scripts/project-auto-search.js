@@ -27,9 +27,9 @@ const autoSearch = (grid, search, previousQuery) => {
 const updateList = (query) => {
     if (!query) return list;
 
-    const splitToLower = (words) => words.toLowerCase().split(' ').filter(w => w);
+    const splitWords = (words) => words.toLowerCase().split(' ').filter(w => w);
     const totalWords = (words) => words.split(' ').filter(w => w).length;
-    const queryWords = splitToLower(query);
+    const queryWords = splitWords(query);
 
     return list
         .map(project => {
@@ -37,7 +37,7 @@ const updateList = (query) => {
 
             const applyWeight = (i, w) => (1 - ((i - match) / queryWords.length)) * w;
 
-            splitToLower(project.title).forEach(fullProjectWord => queryWords.forEach((queryWord, i) => {
+            splitWords(project.title).forEach(fullProjectWord => queryWords.forEach((queryWord, i) => {
                 const partialProjectWord = fullProjectWord.slice(0, queryWord.length);
                 match += queryWord === fullProjectWord ? applyWeight(i, 1.0)
                     : queryWord === partialProjectWord ? applyWeight(i, 0.5) : 0;
