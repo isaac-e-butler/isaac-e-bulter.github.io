@@ -17,7 +17,7 @@
     outline: none;
     height: 160px;
     width: 160px;
-}  
+}
 
 #project-grid a:hover,
 #project-grid a:focus {
@@ -47,6 +47,7 @@
 /* 1 column */
 @media screen and (max-width: 360px) {
     #project-header a[role=link] { width: 130px; position: absolute; transform: translateY(calc(100% + 400px)); }
+    #project-grid a:nth-child(n + 3) { visibility: hidden; }
     #project-header input[type=text] { width: 130px; }
     #project-grid, #project-header { width: 180px; } 
 }
@@ -54,19 +55,24 @@
 /* 2 column */
 @media screen and (min-width: 360px ) and (max-width: 539px) {
     #project-header a[role=link] { width: 310px; position: absolute; transform: translateY(calc(100% + 400px)); }
+    #project-grid a:nth-child(n + 5) { visibility: hidden; }
     #project-header input[type=text] { width: 310px; }
     #project-grid, #project-header { width: 360px; }
 }
 
 /* 3 column */
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 540px) and (max-width: 719px) {
     #project-header a[role=link] { width: 130px; margin-left: auto; }
+    #project-grid a:nth-child(n + 7) { visibility: hidden; }
     #project-header input[type=text] { width: 310px; }
     #project-grid, #project-header { width: 540px; }
 }
 
 /* 4 column */
 @media screen and (min-width: 720px) { 
+    #project-header a[role=link] { width: 130px; margin-left: auto; }
+    #project-grid a:nth-child(n + 9) { visibility: hidden; }
+    #project-header input[type=text] { width: 310px; }
     #project-grid, #project-header { width: 720px; }
 }
 
