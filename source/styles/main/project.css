@@ -52,7 +52,7 @@
 }
 
 /* 2 column */
-@media screen and (min-width: 360px ) and (max-width: 538px) {
+@media screen and (min-width: 360px ) and (max-width: 539px) {
     #project-header a[role=link] { width: 310px; position: absolute; transform: translateY(calc(100% + 400px)); }
     #project-header input[type=text] { width: 310px; }
     #project-grid, #project-header { width: 360px; }
