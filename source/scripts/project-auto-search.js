@@ -1,23 +1,23 @@
 import list from './project-list.js';
 
-export default function() {
+export default function(limit) {
     const search = document.getElementById('project-search');
     const grid = document.getElementById('project-grid');
-    let previousQuery = autoSearch(grid, search);
+    let previousQuery = autoSearch(grid, search, undefined, limit);
 
     search.addEventListener('input', () => 
-        previousQuery = autoSearch(grid, search, previousQuery)
+        previousQuery = autoSearch(grid, search, previousQuery, limit)
     );
 }
 
-const autoSearch = (grid, search, previousQuery) => {
+const autoSearch = (grid, search, previousQuery, limit) => {
     const query = search.value.toLowerCase();
 
     if (query !== previousQuery) {
         grid.innerHTML = '';
         
-        updateList(query).forEach(project => 
-            generateHTML(grid, project)
+        updateList(query).forEach((project, i) => 
+            i < limit && generateHTML(grid, project)
         );
     }
 

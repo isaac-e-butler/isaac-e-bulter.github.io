@@ -3,6 +3,6 @@ import StartAutoSearch from './source/scripts/project-auto-search.js';
 
 window.onload = () => {
     GenerateSocialMedia();
-    StartAutoSearch();
+    StartAutoSearch(8);
 };
 
