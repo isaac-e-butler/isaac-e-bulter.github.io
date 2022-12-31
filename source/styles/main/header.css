@@ -1,6 +1,6 @@
 header {
+    padding: 30px 0px 10px 0px;
     justify-content: center;
-    padding: 20px 0px;
     flex-wrap: wrap;
     display: flex;
 }
