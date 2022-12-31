@@ -38,7 +38,6 @@
     padding: 20px 10px;
     margin: 0px auto;
     display: flex;
-    height: 74px;
 }
 
 /* #endregion headers */
@@ -46,34 +45,40 @@
 
 /* 1 column */
 @media screen and (max-width: 359px) {
-    #project-header a[role=link] { width: 160px; position: absolute; transform: translateY(calc(100% + 400px)); }
     #project-grid a:nth-child(n + 3) { visibility: hidden; }
-    #project-header input[type=text] { width: 130px; }
-    #project-grid, #project-header { width: 180px; } 
+    #project-grid, #project-header { width: 180px; }
+
+    #project-header { flex-wrap: wrap; }
+    #project-header input[type=text] { width: 130px; margin-bottom: 20px; }
+    #project-header a[role=link] { width: 160px; }
 }
 
 /* 2 column */
 @media screen and (min-width: 360px) and (max-width: 539px) {
-    #project-header a[role=link] { width: 340px; position: absolute; transform: translateY(calc(100% + 400px)); }
     #project-grid a:nth-child(n + 5) { visibility: hidden; }
-    #project-header input[type=text] { width: 310px; }
-    #project-grid, #project-header { width: 360px; }    
+    #project-grid, #project-header { width: 360px; }
+    
+    #project-header { flex-wrap: wrap; }
+    #project-header input[type=text] { width: 310px; margin-bottom: 20px; }
+    #project-header a[role=link] { width: 340px; }
 }
 
 /* 3 column */
 @media screen and (min-width: 540px) and (max-width: 719px) {
-    #project-header a[role=link] { width: 160px; margin-left: auto; }
     #project-grid a:nth-child(n + 7) { visibility: hidden; }
-    #project-header input[type=text] { width: 310px; }
     #project-grid, #project-header { width: 540px; }
+
+    #project-header input[type=text] { width: 310px; }
+    #project-header a[role=link] { width: 160px; margin-left: auto; }
 }
 
 /* 4 column */
 @media screen and (min-width: 720px) { 
-    #project-header a[role=link] { width: 160px; margin-left: auto; }
     #project-grid a:nth-child(n + 9) { visibility: hidden; }
-    #project-header input[type=text] { width: 310px; }
     #project-grid, #project-header { width: 720px; }
+
+    #project-header input[type=text] { width: 310px; }
+    #project-header a[role=link] { width: 160px; margin-left: auto; }
 }
 
 /* #endregion media queries */
