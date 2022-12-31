@@ -45,19 +45,19 @@
 /* #region media queries */
 
 /* 1 column */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 359px) {
     #project-header a[role=link] { width: 160px; position: absolute; transform: translateY(calc(100% + 400px)); }
     #project-grid a:nth-child(n + 3) { visibility: hidden; }
-    #project-header input[type=text] { width: 160px; }
+    #project-header input[type=text] { width: 130px; }
     #project-grid, #project-header { width: 180px; } 
 }
 
 /* 2 column */
-@media screen and (min-width: 360px ) and (max-width: 539px) {
-    #project-header a[role=link] { width: 310px; position: absolute; transform: translateY(calc(100% + 400px)); }
+@media screen and (min-width: 360px) and (max-width: 539px) {
+    #project-header a[role=link] { width: 340px; position: absolute; transform: translateY(calc(100% + 400px)); }
     #project-grid a:nth-child(n + 5) { visibility: hidden; }
     #project-header input[type=text] { width: 310px; }
-    #project-grid, #project-header { width: 360px; }
+    #project-grid, #project-header { width: 360px; }    
 }
 
 /* 3 column */

@@ -9,14 +9,11 @@ footer {
 #social-media {
     justify-content: space-between;
     display: inline-flex;
-    margin-left: auto;
-    height: 30px;
-    width: 340px;
+    height: 36px;
 }
 
 #social-media a {
     width: var(--input-height);
-    display: inline-block;
     border-radius: 10px;
     position: relative;
     outline: none;
@@ -35,24 +32,30 @@ footer {
 /* #region media queries */
 
 /* 1 column */
-@media screen and (max-width: 360px) {
-    footer a[role=link] { width: 160px; }
+@media screen and (max-width: 359px) {
+    footer > a[role=link] { width: 160px; position: absolute; transform: translateY(calc(100% + 76px)); }
+    #social-media { width: 160px; position: absolute; transform: translateY(calc(100% + 20px)); }
     footer { width: 180px; }
 }
 
 /* 2 column */
-@media screen and (min-width: 360px ) {
+@media screen and (min-width: 360px) and (max-width: 539px) {
+    footer > a[role=link] { width: 340px; position: absolute; transform: translateY(calc(100% + 76px)); }
+    #social-media { width: 340px; position: absolute; transform: translateY(calc(100% + 20px)); }
     footer { width: 360px; }
 }
 
 /* 3 column */
-@media screen and (min-width: 540px) {
-    footer a[role=link] { width: 160px; }
+@media screen and (min-width: 540px) and (max-width: 719px) {
+    footer > a[role=link] { width: 160px; margin-left: auto; }
+    #social-media { width: 340px; }
     footer { width: 540px; }
 }
 
 /* 4 column */
 @media screen and (min-width: 720px) {
+    footer > a[role=link] { width: 160px; margin-left: auto; }
+    #social-media { width: 340px; }
     footer { width: 720px; }
 }
 
