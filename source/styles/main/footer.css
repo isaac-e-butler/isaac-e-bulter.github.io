@@ -7,26 +7,36 @@ footer {
 }
 
 #social-media {
+    justify-content: space-between;
+    display: inline-flex;
     margin-left: auto;
     height: 30px;
+    width: 340px;
 }
 
 #social-media a {
+    width: var(--input-height);
     display: inline-block;
-    margin: 0px 8px;
-    height: inherit;
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    border: none;
 }
 
 #social-media img {
-    height: inherit;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 20px;
     width: auto;
+    left: 50%;
+    top: 50%;
 }
 
 /* #region media queries */
 
 /* 1 column */
 @media screen and (max-width: 360px) {
-    footer a[role=link] { width: 130px; }
+    footer a[role=link] { width: 160px; }
     footer { width: 180px; }
 }
 
@@ -37,7 +47,7 @@ footer {
 
 /* 3 column */
 @media screen and (min-width: 540px) {
-    footer a[role=link] { width: 130px; }
+    footer a[role=link] { width: 160px; }
     footer { width: 540px; }
 }
 

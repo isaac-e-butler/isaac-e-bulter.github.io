@@ -5,4 +5,3 @@ window.onload = () => {
     GenerateSocialMedia();
     StartAutoSearch(8);
 };
-

@@ -22,34 +22,33 @@
 
 /* #endregion font-face */
 
+:root {
+    --input-height: 36px;
+
+    --background-color: rgb(25 25 25);
+
+    --input-color: rgb(47 47 47);
+    --input-highlight-color: rgb(57 57 57);
+
+    --project-highlight-color: rgb(37 37 37);
+}
+
 html, body, input, a {
     color: rgb(255, 255, 255);
     font-family: 'regular';
 }
 
-b {
-    font-family: 'bold';
-}
+b i, i b { font-family: 'bold-italic'; }
 
-i {
-    font-family: 'italic';
-}
+b { font-family: 'bold'; }
 
-b i, i b {
-    font-family: 'bold-italic';
-}
+i { font-family: 'italic'; }
 
-h1 {
-    font-size: 40px;
-}
+h1 { font-size: 40px; }
 
-p, a {
-    font-size: 14px;
-}
+p, a { font-size: 14px; }
 
-input {
-    font-size: 16px;
-}
+input { font-size: 16px; }
 
 a[role=link] {
     text-decoration: none;
@@ -59,17 +58,21 @@ a[role=link] {
 
 input[type=text], 
 a[role=link] {
-    background-color: rgb(47, 47, 47);
+    background-color: var(--input-color);
+    line-height: var(--input-height);
+    height: var(--input-height);
     border-radius: 10px;
-    padding: 10px 15px;
     outline: none;
     border: none;
-    height: 14px;
+}
+
+input[type=text] {
+    padding: 0px 15px;
 }
 
 input[type=text]:hover,
 input[type=text]:focus,
 a[role=link]:hover,
 a[role=link]:focus {
-    background-color: rgb(57, 57, 57);
+    background-color: var(--input-highlight-color);
 }
