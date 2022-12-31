@@ -14,3 +14,13 @@ header > h1 {
     margin: 0px 0px 0px 20px;
     line-height: 60px;
 }
+
+/* #region media queries */
+
+/* 1 column */
+@media screen and (max-width: 359px) {
+    header > img { height: 40px; }
+    header > h1 { font-size: 30px; line-height: 40px; }
+}
+
+/* #endregion media queries */
