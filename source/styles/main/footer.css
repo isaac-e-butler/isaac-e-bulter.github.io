@@ -44,9 +44,9 @@ footer {
 
 /* 2 column */
 @media screen and (min-width: 360px) and (max-width: 539px) {
-    footer > a[role=link] { width: 340px; position: absolute; transform: translateY(calc(100% + 76px)); }
-    #social-media { width: 340px; position: absolute; transform: translateY(calc(100% + 20px)); }
-    footer { width: 360px; height: 190px; }
+    footer > a[role=link] { width: 340px; position: absolute; transform: translateY(calc(100% + 96px)); }
+    #social-media { width: 340px; position: absolute; transform: translateY(calc(100% + 30px)); }
+    footer { width: 360px; height: 210px; }
 }
 
 /* 3 column */
