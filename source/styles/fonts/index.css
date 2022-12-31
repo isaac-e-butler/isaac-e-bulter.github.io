@@ -74,5 +74,5 @@ input[type=text]:hover,
 input[type=text]:focus,
 a[role=link]:hover,
 a[role=link]:focus {
-    background-color: var(--input-highlight-color);
+    filter: invert();
 }
