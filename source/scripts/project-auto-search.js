@@ -1,23 +1,24 @@
 import list from './project-list.js';
 
-export default function(limit) {
-    const search = document.getElementById('project-search');
-    const grid = document.getElementById('project-grid');
-    let previousQuery = autoSearch(grid, search, undefined, limit);
+const search = document.getElementById('project-search');
+const grid = document.getElementById('project-grid');
+
+export default function(limit, directory) {
+    let previousQuery = autoSearch(undefined, limit, directory);
 
     search.addEventListener('input', () => 
-        previousQuery = autoSearch(grid, search, previousQuery, limit)
+        previousQuery = autoSearch(previousQuery, limit, directory)
     );
 }
 
-const autoSearch = (grid, search, previousQuery, limit) => {
+const autoSearch = (previousQuery, limit, directory) => {
     const query = search.value.toLowerCase();
 
     if (query !== previousQuery) {
         grid.innerHTML = '';
         
         updateList(query).forEach((project, i) => 
-            i < limit && generateHTML(grid, project)
+            i < limit && generateHTML(project, directory)
         );
     }
 
@@ -49,11 +50,11 @@ const updateList = (query) => {
         .sort((a, b) => b.validity - a.validity);
 }
 
-const generateHTML = (grid, project) =>
+const generateHTML = (project, directory) =>
     grid.innerHTML += `
         <a role="option" href="${project.link}" target="_blank" title="${project.title}">
             <img 
-                src="./source/images/projects/${project.icon}"
+                src="${directory}${project.icon}"
                 alt="${project.title} - icon" 
                 draggable="false" 
             />
