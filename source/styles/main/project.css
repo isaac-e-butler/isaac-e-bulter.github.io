@@ -6,7 +6,6 @@
     margin: 0px auto;
     flex-wrap: wrap;
     display: flex;
-    height: 360px;
 }
 
 #project-grid a {
@@ -45,7 +44,7 @@
 
 /* 1 column */
 @media screen and (max-width: 359px) {
-    #project-grid a:nth-child(n + 3) { visibility: hidden; }
+    #project-grid.limited a:nth-child(n + 3) { visibility: hidden; display: none; }
     #project-grid, #project-header { width: 180px; }
 
     #project-header { flex-wrap: wrap; }
@@ -55,7 +54,7 @@
 
 /* 2 column */
 @media screen and (min-width: 360px) and (max-width: 539px) {
-    #project-grid a:nth-child(n + 5) { visibility: hidden; }
+    #project-grid.limited a:nth-child(n + 5) { visibility: hidden; display: none; }
     #project-grid, #project-header { width: 360px; }
     
     #project-header { flex-wrap: wrap; }
@@ -65,7 +64,7 @@
 
 /* 3 column */
 @media screen and (min-width: 540px) and (max-width: 719px) {
-    #project-grid a:nth-child(n + 7) { visibility: hidden; }
+    #project-grid.limited a:nth-child(n + 7) { visibility: hidden; display: none; }
     #project-grid, #project-header { width: 540px; }
 
     #project-header input[type=text] { width: 310px; }
@@ -74,7 +73,7 @@
 
 /* 4 column */
 @media screen and (min-width: 720px) { 
-    #project-grid a:nth-child(n + 9) { visibility: hidden; }
+    #project-grid.limited a:nth-child(n + 9) { visibility: hidden; display: none; }
     #project-grid, #project-header { width: 720px; }
 
     #project-header input[type=text] { width: 310px; }

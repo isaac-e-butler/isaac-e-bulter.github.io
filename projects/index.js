@@ -3,5 +3,5 @@ import StartAutoSearch from '../source/scripts/project-auto-search.js';
 
 window.onload = () => {
     GenerateSocialMedia('../source/images/social-media/');
-    StartAutoSearch(64, '../source/images/projects/');
+    StartAutoSearch(32, '../source/images/projects/');
 };
