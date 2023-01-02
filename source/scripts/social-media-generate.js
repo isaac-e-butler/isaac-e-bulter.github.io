@@ -5,7 +5,7 @@ export default function(directory) {
         document.getElementById('social-media').innerHTML += `
             <a role="link" href="${media.link}" target="_blank">
                 <img 
-                    src="${directory}${media.icon}" 
+                    src="${directory}/images/social-media/${media.icon}" 
                     alt="${media.alt}" 
                     draggable="false"
                 />

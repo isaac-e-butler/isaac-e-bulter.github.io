@@ -50,13 +50,15 @@ const updateList = (query) => {
         .sort((a, b) => b.validity - a.validity);
 }
 
-const generateHTML = (project, directory) =>
+const generateHTML = (project, directory) => {
+    const { title, icon, link, external } = project;
     grid.innerHTML += `
-        <a role="option" href="${project.link}" target="_blank" title="${project.title}">
+        <a role="option" href="${external ? link : directory.project + link}" target="_blank" title="${title}">
             <img 
-                src="${directory}${project.icon}"
-                alt="${project.title} - icon" 
+                src="${directory.source}/images/projects/${icon}"
+                alt="${title} - icon" 
                 draggable="false" 
             />
         </a>
-`;
+    `;
+}
