@@ -15,11 +15,14 @@ const autoSearch = (previousQuery, limit, directory) => {
     const query = search.value.toLowerCase();
 
     if (query !== previousQuery) {
+        const updatedList = updateList(query);
         grid.innerHTML = '';
         
-        updateList(query).forEach((project, i) => 
-            i < limit && generateHTML(project, directory)
+        updatedList.forEach((project, i) => 
+            i < limit && generateProject(project, directory)
         );
+
+        if (!updatedList.length) generateNoResult(query);
     }
 
     return query;
@@ -50,7 +53,7 @@ const updateList = (query) => {
         .sort((a, b) => b.validity - a.validity);
 }
 
-const generateHTML = (project, directory) => {
+const generateProject = (project, directory) => {
     const { title, icon, link, external } = project;
     grid.innerHTML += `
         <a role="option" href="${external ? link : directory.project + link}" target="_blank" title="${title}">
@@ -62,3 +65,10 @@ const generateHTML = (project, directory) => {
         </a>
     `;
 }
+
+const generateNoResult = (query) => 
+    grid.innerHTML += `
+        <div class="message">
+            <p>no results for '${query}'</p>
+        </div>
+`;

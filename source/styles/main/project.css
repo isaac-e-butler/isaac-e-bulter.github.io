@@ -1,3 +1,13 @@
+/* #region headers */
+
+#project-header {
+    box-sizing: border-box;
+    padding: 20px 10px;
+    margin: 0px auto;
+    display: flex;
+}
+
+/* #endregion headers */
 /* #region grid */
 
 #project-grid {
@@ -29,17 +39,21 @@
     width: 100%;
 }
 
-/* #endregion grid */
-/* #region headers */
-
-#project-header {
-    box-sizing: border-box;
-    padding: 20px 10px;
-    margin: 0px auto;
-    display: flex;
+#project-grid div.message {
+    align-items: center;
+    display : flex;
+    width: inherit;
+    height: 180px;
 }
 
-/* #endregion headers */
+#project-grid div.message p {
+    word-break: break-all;
+    width: fit-content;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+/* #endregion grid */
 /* #region media queries */
 
 /* 1 column */
