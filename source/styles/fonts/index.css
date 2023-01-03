@@ -1,3 +1,5 @@
+/* #region font-face */
+
 @font-face {
     font-family: 'regular';
     src: url('./ubuntu-mono-regular.ttf');
@@ -18,35 +20,68 @@
     src: url('./ubuntu-mono-bold-italic.ttf');
 }
 
-html, a {
-    color: rgb(255, 255, 255);
+/* #endregion font-face */
+
+:root {
+    --input-height: 36px;
+
+    --background-color: rgb(25 25 25);
+
+    --input-color: rgb(47 47 47);
+    --input-highlight-color: rgb(200 200 200);
+
+    --text-color: rgb(255 255 255);
+    --text-highlight-color: rgb(0 0 0);
+
+    --project-highlight-color: rgb(37 37 37);
+}
+
+html, body, input, a {
+    color: var(--text-color);
     font-family: 'regular';
 }
 
-b {
-    font-family: 'bold';
+b i, i b { font-family: 'bold-italic'; }
+
+b { font-family: 'bold'; }
+
+i { font-family: 'italic'; }
+
+h1 { font-size: 40px; }
+
+p, a { font-size: 14px; }
+
+input { font-size: 16px; }
+
+a[role=link] {
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
 }
 
-i {
-    font-family: 'italic';
+input[type=text], 
+a[role=link] {
+    background-color: var(--input-color);
+    line-height: var(--input-height);
+    height: var(--input-height);
+    border-radius: 10px;
+    outline: none;
+    border: none;
 }
 
-b i, i b {
-    font-family: 'bold-italic';
+input[type=text] {
+    padding: 0px 15px;
 }
 
-p {
-    font-size: 14px;
+input[type=text]:hover,
+input[type=text]:focus,
+a[role=link]:hover,
+a[role=link]:focus {
+    background-color: var(--input-highlight-color);
+    color: var(--text-highlight-color);
 }
 
-h1 {
-    font-size: 40px;
-}
-
-h3, button {
-    font-size: 22px;
-}
-
-h5 {
-    font-size: 18px;
+a[role=link]:hover img,
+a[role=link]:focus img {
+    filter: invert();
 }

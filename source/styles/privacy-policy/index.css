@@ -1,7 +1,7 @@
 @import url('../fonts/index.css');
 
 html, body {
-    background-color: rgb(25, 25, 25);
+    background-color: var(--background-color);
     font-size: 14px;
     padding: 0px;
     margin: 0px;

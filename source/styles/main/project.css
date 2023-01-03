@@ -1,0 +1,97 @@
+/* #region headers */
+
+#project-header {
+    box-sizing: border-box;
+    padding: 20px 10px;
+    margin: 0px auto;
+    display: flex;
+}
+
+/* #endregion headers */
+/* #region grid */
+
+#project-grid {
+    justify-content: left;
+    overflow-y: hidden;
+    margin: 0px auto;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#project-grid a {
+    border: solid 10px transparent;
+    text-decoration: none;
+    border-radius: 27%;
+    display: block;
+    outline: none;
+    height: 160px;
+    width: 160px;
+}
+
+#project-grid a:hover,
+#project-grid a:focus {
+    border-color: var(--project-highlight-color);
+}
+
+#project-grid a img {
+    border-radius: 25%;
+    height: 100%;
+    width: 100%;
+}
+
+#project-grid div.message {
+    align-items: center;
+    display : flex;
+    width: inherit;
+    height: 180px;
+}
+
+#project-grid div.message p {
+    word-break: break-all;
+    width: fit-content;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+/* #endregion grid */
+/* #region media queries */
+
+/* 1 column */
+@media screen and (max-width: 379px) {
+    #project-grid.limited a:nth-child(n + 3) { visibility: hidden; display: none; }
+    #project-grid, #project-header { width: 180px; }
+
+    #project-header { flex-wrap: wrap; }
+    #project-header input[type=text] { width: 130px; margin-bottom: 20px; }
+    #project-header a[role=link] { width: 160px; }
+}
+
+/* 2 column */
+@media screen and (min-width: 380px) and (max-width: 559px) {
+    #project-grid.limited a:nth-child(n + 5) { visibility: hidden; display: none; }
+    #project-grid, #project-header { width: 360px; }
+    
+    #project-header { flex-wrap: wrap; }
+    #project-header input[type=text] { width: 310px; margin-bottom: 20px; }
+    #project-header a[role=link] { width: 340px; }
+}
+
+/* 3 column */
+@media screen and (min-width: 560px) and (max-width: 739px) {
+    #project-grid.limited a:nth-child(n + 7) { visibility: hidden; display: none; }
+    #project-grid, #project-header { width: 540px; }
+
+    #project-header input[type=text] { width: 310px; }
+    #project-header a[role=link] { width: 160px; margin-left: auto; }
+}
+
+/* 4 column */
+@media screen and (min-width: 740px) { 
+    #project-grid.limited a:nth-child(n + 9) { visibility: hidden; display: none; }
+    #project-grid, #project-header { width: 720px; }
+
+    #project-header input[type=text] { width: 310px; }
+    #project-header a[role=link] { width: 160px; margin-left: auto; }
+}
+
+/* #endregion media queries */

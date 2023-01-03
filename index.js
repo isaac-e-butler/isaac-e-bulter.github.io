@@ -1,7 +1,7 @@
-import * as slideShow from './source/scripts/slide-show.js';
-import * as ghostie from './source/scripts/ghostie.js';
+import GenerateSocialMedia from './source/scripts/social-media-generate.js';
+import StartAutoSearch from './source/scripts/project-auto-search.js';
 
 window.onload = () => {
-    slideShow.start();
-    ghostie.start();
+    GenerateSocialMedia('./source');
+    StartAutoSearch(8, { source: './source', project: './projects/' });
 };
