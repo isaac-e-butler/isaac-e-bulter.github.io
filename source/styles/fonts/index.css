@@ -28,13 +28,16 @@
     --background-color: rgb(25 25 25);
 
     --input-color: rgb(47 47 47);
-    --input-highlight-color: rgb(57 57 57);
+    --input-highlight-color: rgb(200 200 200);
+
+    --text-color: rgb(255 255 255);
+    --text-highlight-color: rgb(0 0 0);
 
     --project-highlight-color: rgb(37 37 37);
 }
 
 html, body, input, a {
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     font-family: 'regular';
 }
 
@@ -74,5 +77,11 @@ input[type=text]:hover,
 input[type=text]:focus,
 a[role=link]:hover,
 a[role=link]:focus {
+    background-color: var(--input-highlight-color);
+    color: var(--text-highlight-color);
+}
+
+a[role=link]:hover img,
+a[role=link]:focus img {
     filter: invert();
 }
