@@ -1,3 +1,6 @@
 [submodule "projects/maze-game"]
 	path = projects/maze-game
-	url = https://github.com/GhostRunners25/maze-game
+	url = https://github.com/GhostRunners25/maze-game.git
+[submodule "projects/ludum-dare-52"]
+	path = projects/ludum-dare-52
+	url = https://github.com/GhostRunners25/ludum-dare-52.git
