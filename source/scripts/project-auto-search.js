@@ -1,25 +1,35 @@
 import list from './project-list.js';
 
 const search = document.getElementById('project-search');
+const view = document.getElementById('project-button');
 const grid = document.getElementById('project-grid');
 
-export default function(limit, directory) {
-    let previousQuery = autoSearch(undefined, limit, directory);
+let isLimited = true;
 
-    search.addEventListener('input', () => 
-        previousQuery = autoSearch(previousQuery, limit, directory)
-    );
+export default function() {
+    let previousQuery = autoSearch();
+
+    view.addEventListener('click', () => {
+        isLimited = !isLimited;
+        grid.className = isLimited ? 'limited' : '';
+        view.innerHTML = isLimited ? 'view all' : 'view less';
+
+        previousQuery = autoSearch();
+    });
+    
+    search.addEventListener('input', () => previousQuery = autoSearch(previousQuery));
 }
 
-const autoSearch = (previousQuery, limit, directory) => {
+const autoSearch = (previousQuery) => {
     const query = search.value.toLowerCase();
+    const limit = isLimited ? 8 : 32;
 
     if (query !== previousQuery) {
         const updatedList = updateList(query);
         grid.innerHTML = '';
         
         updatedList.forEach((project, i) => 
-            i < limit && generateProject(project, directory)
+            i < limit && generate(project)
         );
 
         if (!updatedList.length) generateNoResult(query);
@@ -53,12 +63,12 @@ const updateList = (query) => {
         .sort((a, b) => b.validity - a.validity);
 }
 
-const generateProject = (project, directory) => {
-    const { title, icon, link, external } = project;
+const generate = (project) => {
+    const { title, icon, link } = project;
     grid.innerHTML += `
-        <a role="option" href="${external ? link : directory.project + link}" target="_blank" title="${title}">
+        <a role="option" href="${link}" target="_blank" title="${title}">
             <img 
-                src="${directory.source}/images/projects/${icon}"
+                src="./source/images/projects/${icon}"
                 alt="${title} - icon" 
                 draggable="false" 
             />

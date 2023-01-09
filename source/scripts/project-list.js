@@ -2,6 +2,6 @@ export default [
     {
         title: 'MAZE GAME',
         icon: 'maze-game-icon.png',
-        link: 'maze-game',
+        link: './projects/maze-game',
     },
 ];
