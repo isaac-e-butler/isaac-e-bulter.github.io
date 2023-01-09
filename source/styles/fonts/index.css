@@ -36,7 +36,7 @@
     --project-highlight-color: rgb(37 37 37);
 }
 
-html, body, input, a {
+html, body, input, a, button {
     color: var(--text-color);
     font-family: 'regular';
 }
@@ -53,14 +53,17 @@ p, a { font-size: 14px; }
 
 input { font-size: 16px; }
 
+button,
 a[role=link] {
     text-decoration: none;
     text-align: center;
     font-size: 16px;
+    cursor: pointer;
 }
 
-input[type=text], 
-a[role=link] {
+button,
+a[role=link],
+input[type=text] {
     background-color: var(--input-color);
     line-height: var(--input-height);
     height: var(--input-height);
@@ -73,10 +76,9 @@ input[type=text] {
     padding: 0px 15px;
 }
 
-input[type=text]:hover,
-input[type=text]:focus,
-a[role=link]:hover,
-a[role=link]:focus {
+button:hover, button:focus,
+a[role=link]:hover, a[role=link]:focus,
+input[type=text]:hover, input[type=text]:focus {
     background-color: var(--input-highlight-color);
     color: var(--text-highlight-color);
 }

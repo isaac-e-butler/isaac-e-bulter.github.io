@@ -17,7 +17,6 @@ footer {
     width: var(--input-height);
     border-radius: 10px;
     position: relative;
-    outline: none;
     border: none;
 }
 
