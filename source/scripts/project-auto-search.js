@@ -12,7 +12,7 @@ export default function() {
     view.addEventListener('click', () => {
         isLimited = !isLimited;
         grid.className = isLimited ? 'limited' : '';
-        view.innerHTML = 'show ' + (isLimited ? 'all' : 'less'); // change to options (8, 16, 32)
+        view.innerHTML = 'show ' + (isLimited ? 'all' : 'less');
 
         previousQuery = autoSearch();
     });
