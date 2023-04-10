@@ -6,18 +6,8 @@
 }
 
 @font-face {
-    font-family: 'bold';
-    src: url('./ubuntu-mono-bold.ttf');
-}
-
-@font-face {
     font-family: 'italic';
     src: url('./ubuntu-mono-italic.ttf');
-}
-
-@font-face {
-    font-family: 'bold-italic';
-    src: url('./ubuntu-mono-bold-italic.ttf');
 }
 
 /* #endregion font-face */
@@ -27,23 +17,18 @@
 
     --background-color: rgb(25 25 25);
 
-    --input-color: rgb(47 47 47);
-    --input-highlight-color: rgb(200 200 200);
-
-    --text-color: rgb(255 255 255);
-    --text-highlight-color: rgb(0 0 0);
+    --color-grey: rgb(47 47 47);
+    --color-white: rgb(255 255 255);
+    --color-active-white: rgb(200 200 200);
 
     --project-highlight-color: rgb(37 37 37);
 }
 
-html, body, input, a, button {
-    color: var(--text-color);
+* {
+    color: var(--color-white);
     font-family: 'regular';
+    font-weight: 600;
 }
-
-b i, i b { font-family: 'bold-italic'; }
-
-b { font-family: 'bold'; }
 
 i { font-family: 'italic'; }
 
@@ -53,6 +38,10 @@ p, a { font-size: 14px; }
 
 input { font-size: 16px; }
 
+input[type=text] {
+    padding: 0px 15px;
+}
+
 button,
 a[role=link] {
     text-decoration: none;
@@ -61,10 +50,12 @@ a[role=link] {
     cursor: pointer;
 }
 
+/* #region normal */
+
 button,
 a[role=link],
 input[type=text] {
-    background-color: var(--input-color);
+    background-color: var(--color-grey);
     line-height: var(--input-height);
     height: var(--input-height);
     border-radius: 10px;
@@ -72,18 +63,47 @@ input[type=text] {
     border: none;
 }
 
-input[type=text] {
-    padding: 0px 15px;
+/* #endregion normal */
+/* #region hover */
+
+button:hover,
+a[role=link]:hover,
+input[type=text]:hover {
+    background-color: var(--color-white);
+    color: var(--color-grey);
 }
 
-button:hover, button:focus,
-a[role=link]:hover, a[role=link]:focus,
-input[type=text]:hover, input[type=text]:focus {
-    background-color: var(--input-highlight-color);
-    color: var(--text-highlight-color);
-}
-
-a[role=link]:hover img,
-a[role=link]:focus img {
+a[role=link]:hover img {
     filter: invert();
 }
+
+/* #endregion hover */
+/* #region focus */
+
+button:focus,
+a[role=link]:focus,
+input[type=text]:focus {
+    outline: 2px solid var(--color-white);
+}
+
+/* #endregion focus */
+/* #region active */
+
+button:active,
+a[role=link]:active,
+input[type=text]:active {
+    background-color: var(--color-active-white);
+    color: var(--color-grey);
+    outline: none;
+}
+
+/* #endregion active */
+/* #region disabled */
+
+button:disabled,
+a[role=link]:disabled,
+input[type=text]:disabled {
+    visibility: hidden;
+}
+
+/* #endregion disabled */

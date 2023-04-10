@@ -12,7 +12,7 @@ export default function() {
     view.addEventListener('click', () => {
         isLimited = !isLimited;
         grid.className = isLimited ? 'limited' : '';
-        view.innerHTML = isLimited ? 'view all' : 'view less';
+        view.innerHTML = 'show ' + (isLimited ? 'all' : 'less'); // change to options (8, 16, 32)
 
         previousQuery = autoSearch();
     });
@@ -79,6 +79,6 @@ const generate = (project) => {
 const generateNoResult = (query) => 
     grid.innerHTML += `
         <div class="message">
-            <p>no results for '${query}'</p>
+            <p>no results for "<i>${query}</i>"</p>
         </div>
 `;
