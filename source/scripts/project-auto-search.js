@@ -22,7 +22,7 @@ export default function() {
 
 const autoSearch = (previousQuery) => {
     const query = search.value.toLowerCase();
-    const limit = isLimited ? 8 : 32;
+    const limit = isLimited ? 4 : 16;
 
     if (query !== previousQuery) {
         const updatedList = updateList(query);

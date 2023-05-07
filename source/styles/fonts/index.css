@@ -25,6 +25,7 @@
 }
 
 * {
+    -webkit-tap-highlight-color: transparent;
     color: var(--color-white);
     font-family: 'regular';
     font-weight: 600;
