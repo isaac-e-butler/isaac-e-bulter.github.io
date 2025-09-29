@@ -1,0 +1,40 @@
+/* Corinthia */
+@font-face {
+    font-family: "corinthia";
+    src: url("../fonts/corinthia/Corinthia-Regular.ttf");
+}
+
+/* DM Serif Text */
+@font-face {
+    font-family: "dm-serif-text";
+    src: url("../fonts/dm-serif-text/DMSerifText-Regular.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "dm-serif-text";
+    src: url("../fonts/dm-serif-text/DMSerifText-Italic.ttf");
+    font-style: italic;
+}
+
+/* Roboto */
+@font-face {
+    font-family: "roboto";
+    src: url("../fonts/roboto/Roboto-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("../fonts/roboto/Roboto-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("../fonts/roboto/Roboto-Italic.ttf");
+    font-weight: normal;
+    font-style: italic;
+}
